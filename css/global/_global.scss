@@ -48,3 +48,48 @@ body {
   }
 }
 
+.tippy-box {
+    background-color: #1A1A1A;
+    border-radius: 8px;
+    padding: 6px 10px;
+
+  //&[data-theme~='tomato'][data-placement^='top'] > .tippy-arrow::before {
+  &[data-placement^='top'] > .tippy-arrow::before {
+    border-top-color: #1A1A1A;
+  }
+  &[data-placement^='bottom'] > .tippy-arrow::before {
+    border-bottom-color: #1A1A1A;
+  }
+  &[data-placement^='left'] > .tippy-arrow::before {
+    border-left-color: #1A1A1A;
+  }
+  &[data-placement^='right'] > .tippy-arrow::before {
+    border-right-color: #1A1A1A;
+  }
+}
+
+.tippy-content {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.196px;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 0;
+
+  a {
+    color: #508AFF;
+    text-decoration: underline;
+
+    &:hover {
+      color: #508AFF;
+      text-decoration: none;
+    }
+  }
+}
+
+/*
+.tippy-box[data-theme~='tomato'] {
+  background-color: tomato;
+  color: yellow;
+}*/
