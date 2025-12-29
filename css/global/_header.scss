@@ -116,12 +116,23 @@
 
   &_theme {
     margin: 7px 0 0 0;
+    padding: 0;
     cursor: pointer;
     opacity: 0.14;
     background: none;
     border: none;
     outline: none;
     transition: all 0.3s;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      left: -5px;
+      bottom: -5px;
+      content: "";
+    }
 
     &:hover {
       opacity: 0.8;

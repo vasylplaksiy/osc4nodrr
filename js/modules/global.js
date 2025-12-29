@@ -78,12 +78,3 @@ if (document.querySelector(".nav_close")) {
         pageScroll.enable();
     });
 }
-
-if (document.querySelector('.tippy-html')) {
-    tippy('.tippy-html', {
-        allowHTML: true,
-        interactive :true,
-        maxWidth: 130,
-        placement: 'top-end',
-    });
-}

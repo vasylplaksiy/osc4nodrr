@@ -88,8 +88,22 @@ body {
   }
 }
 
-/*
-.tippy-box[data-theme~='tomato'] {
-  background-color: tomato;
-  color: yellow;
-}*/
+
+.tippy-box[data-theme~='important'] {
+  background-color: #F24602;
+  color: #fff;
+
+  &[data-placement^='top'][data-theme~='important'] > .tippy-arrow::before {
+    border-top-color: #F24602;
+  }
+  &[data-placement^='bottom'][data-theme~='important'] > .tippy-arrow::before {
+    border-bottom-color: #F24602;
+  }
+  &[data-placement^='left'][data-theme~='important'] > .tippy-arrow::before {
+    border-left-color: #F24602;
+  }
+  &[data-placement^='right'][data-theme~='important'] > .tippy-arrow::before {
+    border-right-color: #F24602;
+  }
+}
+

@@ -1,2 +1,151 @@
-.theme {
+.theme-slider {
+  --prev-bg: linear-gradient(270deg, rgba(245, 245, 245, 0) 0%, #F5F5F5 100%);
+  --next-bg: linear-gradient(270deg, #F5F5F5 0%, rgba(245, 245, 245, 0) 100%);
+
+  html[data-theme="dark"] & {
+    --prev-bg: linear-gradient(270deg, rgba(18, 18, 18, 0) 0%, #121212 100%);
+    --next-bg: linear-gradient(270deg, #121212 0%, rgba(18, 18, 18, 0) 100%);
+  }
+
+  padding: 0 20px 0 20px;
+  margin: 0 0 0 -20px;
+  width: 100vw;
+
+  @media all and (min-width: 960px) {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  &_controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &_controls &-prev,
+  &_controls &-next {
+    display: none;
+    align-items: center;
+    //width: 45px;
+    background: var(--bg-main);
+    cursor: pointer;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+
+
+    &.swiper-button-disabled {
+      cursor: default;
+      opacity: 0.4;
+    }
+
+    i {
+      width: 30px;
+      height: 30px;
+      position: relative;
+      display: block;
+      border-radius: 10px;
+      background-color: var(--sl-btn-bg);
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-image: url("../img/prev.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &:not(.swiper-button-disabled):hover i:before {
+      filter: var(--sl-btn-arr-hover);
+    }
+
+    @media all and (min-width: 960px) {
+      display: flex;
+    }
+  }
+
+  &_controls &-prev {
+    left: 0;
+    justify-content: start;
+  }
+
+  &_controls &-next {
+    right: 0;
+    justify-content: end;
+
+    i {
+      transform: rotate(180deg);
+    }
+  }
+
+  & &-prev,
+  & &-next {
+    position: absolute;
+    width: 102px;
+    top: 0px;
+    bottom: 0;
+    z-index: 6;
+    opacity: 1;
+    display: none;
+
+    &.swiper-button-disabled {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    @media all and (min-width: 960px) {
+      display: block;
+    }
+  }
+
+  & &-prev {
+    left: 0;
+    background: var(--prev-bg);
+  }
+
+  & &-next {
+    right: 0;
+    background: var(--next-bg);
+  }
+
+  &-prev,
+  &-next {
+    &--fix {
+      display: none;
+    }
+  }
+
+
+  &_el {
+    background: var(--el-bg);
+    border-radius: 8px;
+    height: auto;
+    gap: 10px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+
+    &:after {
+      padding: 177.51% 0 0 0;
+      content: "";
+      display: block;
+      font-size: 0;
+      line-height: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
 }

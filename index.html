@@ -25,6 +25,9 @@
     </script>
 
     <link href="css/main.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -97,9 +100,14 @@
 <main class="main">
 
     <section class="section">
-        <header class="section_header section_header--sl-controls">
+        <header class="section_header">
             <h2 class="section_title">Выбери шаблон</h2>
+            <div class="theme-slider_controls">
+                <div class="theme-slider-prev"><i></i></div>
+                <div class="theme-slider-next"><i></i></div>
+            </div>
         </header>
+
         <div class="swiper theme-slider">
             <div class="swiper-wrapper theme-slider_list">
                 <div class="swiper-slide theme-slider_el">
@@ -121,10 +129,10 @@
                     <img src="/upload/top_sl/sl1.png" width="249" height="443" alt="">
                 </a>
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev theme-slider_prev"></div>
-            <div class="swiper-button-next theme-slider_next"></div>
+            <div class="theme-slider-prev"></div>
+            <div class="theme-slider-prev theme-slider-prev--fix"></div>
+            <div class="theme-slider-next"></div>
+            <div class="theme-slider-next theme-slider-next--fix"></div>
         </div>
     </section>
 
@@ -274,7 +282,7 @@
                 </div>
                 <div class="catalog_buy">
                     <div class="catalog_price">3 300 ₽</div>
-                    <a href="#" class="catalog_buy__btn tippy-html" data-tippy-content='Возможен предказ, читать <a href="#">подробнее</a>'>Предзааказ</a>
+                    <a href="#" class="catalog_buy__btn tippy-html" data-tippy-content='Возможен предзаказ, читать <a href="#">подробнее</a>'>Предзаказ</a>
                 </div>
             </div>
         </div>
@@ -326,8 +334,7 @@
                         <span class="reviews_author__name">Олег Терехов</span>
                     </header>
                     <p>
-                        Моя аудитория <span
-                            data-inform="Instagram  (запрещён в России, принадлежит Meta)">в Instagram*</span> в шоке —
+                        Моя аудитория <a href="#" class="tippy-inform" data-tippy-content="Instagram  (запрещён в России, принадлежит Meta)">в Instagram*</a> в шоке —
                         все думают, что я был в Дубае на фотосессии. А это всё нейросеть!
                     </p>
                     <time class="reviews_el__time" datetime="2025-08-07">07.08.2025</time>
@@ -453,5 +460,6 @@
 <script defer src="/js/lib/tippy-bundle.umd.min.js"></script>
 <script defer src="/js/modules/global.js"></script>
 <script defer src="/js/modules/sliders.js"></script>
+<script defer src="/js/modules/tippy.js"></script>
 </body>
 </html>
