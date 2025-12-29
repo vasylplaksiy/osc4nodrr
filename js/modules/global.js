@@ -85,6 +85,5 @@ if (document.querySelector('.tippy-html')) {
         interactive :true,
         maxWidth: 130,
         placement: 'top-end',
-        // delay: [0, 300],
     });
 }

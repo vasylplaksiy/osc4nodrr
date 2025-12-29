@@ -15,6 +15,10 @@
   --color-title-seo: var(--color-title);
 
   --color-link: #7388FF;
+
+
+  --sl-btn-bg: #ECECEC;
+  --sl-btn-arr-hover: invert(30%) sepia(95%) saturate(5000%) hue-rotate(215deg) brightness(100%) contrast(90%);;
 }
 
 html[data-theme="dark"] {
@@ -30,5 +34,8 @@ html[data-theme="dark"] {
   --color-title-seo: #AFAFAF;
 
   --color-link: #3A57FF;
+
+  --sl-btn-bg: #272727;
+  --sl-btn-arr-hover: invert(27%) sepia(95%) saturate(3000%) hue-rotate(215deg) brightness(95%) contrast(90%);
 }
 
