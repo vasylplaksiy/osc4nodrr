@@ -1,0 +1,34 @@
+:root {
+  --font: 400 16px/1.33 "Manrope", sans-serif;
+  --font-family: "Manrope", sans-serif;
+
+  --bg: #ECECEC;
+  --bg-main: #F5F5F5;
+  --bg-footer: #000;
+
+  --text: #323232;
+  --text-second: #141414;
+
+  --table-border: #121212;
+
+  --color-title: #191919;
+  --color-title-seo: var(--color-title);
+
+  --color-link: #7388FF;
+}
+
+html[data-theme="dark"] {
+  --bg: #000;
+  --bg-main: #121212;
+  --bg-footer: #121212;
+
+  --text: #AFAFAF;
+  --text-second: #AFAFAF;
+  --table-border: #F5F5F5;
+
+  --color-title: #E3E3E3;
+  --color-title-seo: #AFAFAF;
+
+  --color-link: #3A57FF;
+}
+

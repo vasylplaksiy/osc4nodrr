@@ -1,0 +1,124 @@
+.section {
+  @extend .inner;
+  margin-top: 40px;
+  padding-top: 15px;
+
+  a {
+    color: var(--color-link);
+    text-decoration: underline;
+
+    &:hover{
+      color: var(--color-link);
+      text-decoration: none;
+    }
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &_header {
+    margin: 0 0 20px 0;
+  }
+
+  & &_title{
+    margin: 0;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 0.196px;
+    color: var(--color-title);
+    width: 60%;
+
+    @media all and (max-width: 1100px) {
+      width: 100%;
+    }
+  }
+
+  &_header--sl-controls {
+    @media all and (max-width: 1100px) {
+      padding-right: 80px;
+    }
+  }
+
+  .main + & {
+    margin-top: 15px;
+  }
+
+  body > & &_title {
+    color: var(--color-title-seo);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 25px 0 15px 0;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 22px;
+    margin-top: 20px;
+  }
+
+  h4 {
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: 500;
+  }
+
+  h5 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  h6 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  p, ol, ul, table {
+    margin: 15px 0 0 0;
+  }
+
+  ol, ul {
+    padding: 0 0 0 20px;
+  }
+
+  table {
+    border-collapse: collapse;
+    max-width: 100%;
+    margin-top: 10px;
+  }
+
+  table, th, td {
+    border: 1px solid var(--table-border);
+  }
+
+  th, td {
+    padding: 5px 8px;
+    text-align: left;
+  }
+  
+  @media all and (max-width: 959px) {
+    & &_title{
+      font-size: 24px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 24px;
+    }
+
+    h2 {
+      font-size: 22px;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  }
+
+}

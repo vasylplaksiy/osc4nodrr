@@ -1,0 +1,33 @@
+.footer {
+  background-color: var(--bg-footer);
+  color: #fff;
+  padding: 5px 0;
+  margin: 30px 0 0 0;
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &_copyright {
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  &_logo {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+
+  @media all and (max-width: 767px) {
+    &_logo {
+      width: 48px;
+    }
+  }
+}
