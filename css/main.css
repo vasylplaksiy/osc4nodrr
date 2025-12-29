@@ -1558,6 +1558,7 @@ html[data-theme=light] .header_theme[data-theme=light] {
 @media all and (max-width: 1100px) {
   .section .section_title {
     width: auto;
+    max-width: 100%;
   }
 }
 .main + .section {
